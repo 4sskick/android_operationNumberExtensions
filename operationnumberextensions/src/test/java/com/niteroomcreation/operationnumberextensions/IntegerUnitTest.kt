@@ -23,4 +23,28 @@ class IntegerUnitTest {
         assert(number.isPositive())
     }
 
+    @Test
+    fun isPrimeCorrect() {
+        var number = 14
+        var anotherNumber = 23
+
+        if (number.isPrime() == false && anotherNumber.isPrime() == true) {
+            assert(true)
+        } else
+            assert(false)
+    }
+
+    @Test
+    fun primeFactorisCorrect() {
+        var number = 21
+        var factorNumbers = number.primeFactor()
+
+        if (factorNumbers.size == 2
+            && factorNumbers[0] == 3
+            && factorNumbers[1] == 7
+        )
+            assert(true)
+        else
+            assert(false)
+    }
 }
