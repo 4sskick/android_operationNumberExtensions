@@ -2,29 +2,29 @@ package com.niteroomcreation.operationnumberextensions
 
 import org.junit.Test
 
-/**
- * Created by Septian Adi Wijaya on 28/10/2020.
- * please be sure to add credential if you use people's code
- */
+import org.junit.Assert.*
 
-class IntegerUnitTest {
+/**
+ * Created by Septian Adi Wijaya on 02/11/20
+ */
+class IntegerKtTest {
 
     @Test
-    fun isNegativeIsCorrect() {
+    fun isNegative() {
         var number = -99
 
         assert(number.isNegative())
     }
 
     @Test
-    fun isPositiveIsCorrect() {
+    fun isPositive() {
         var number = 99
 
         assert(number.isPositive())
     }
 
     @Test
-    fun isPrimeCorrect() {
+    fun isPrime() {
         var number = 14
         var anotherNumber = 23
 
@@ -35,7 +35,7 @@ class IntegerUnitTest {
     }
 
     @Test
-    fun primeFactorisCorrect() {
+    fun primeFactor() {
         var number = 21
         var factorNumbers = number.primeFactor()
 
@@ -46,5 +46,31 @@ class IntegerUnitTest {
             assert(true)
         else
             assert(false)
+    }
+
+    @Test
+    fun power() {
+        var number = 3
+        var powNumber = 2
+        var powResult = number.power(powNumber)
+
+        assert(powResult == 9)
+    }
+
+    @Test
+    fun square() {
+        var number = 4
+        var result = number.square()
+
+        assert(result == 16)
+    }
+
+    @Test
+    fun cubic() {
+        var number = 2
+        var result = number.cubic()
+
+        assert(result == 8)
+
     }
 }

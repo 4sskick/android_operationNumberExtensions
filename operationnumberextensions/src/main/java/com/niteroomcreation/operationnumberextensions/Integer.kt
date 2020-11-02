@@ -49,5 +49,26 @@ fun Int.primeFactor(): List<Int> {
     return factorNumbers
 }
 
+/**
+ * bilangan berpangkat
+ * ex. 3^2 = 9
+ */
+fun Int.power(pow: Int): Int {
+
+    var value = 1
+    repeat(pow) {
+        value = value * this
+    }
+
+    return value
+}
+
+fun Int.square(): Int {
+    return power(2)
+}
+
+fun Int.cubic(): Int {
+    return power(3)
+}
 
 
