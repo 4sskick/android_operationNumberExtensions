@@ -86,7 +86,7 @@ class IntegerKtTest {
     @Test
     fun absolute() {
         var number  = -1233
-        var result = number.absoluteValue
+        var result = number.absolute()
 
         assert(result == 1233)
     }
