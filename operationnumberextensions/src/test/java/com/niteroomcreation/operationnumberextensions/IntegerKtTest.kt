@@ -3,6 +3,7 @@ package com.niteroomcreation.operationnumberextensions
 import org.junit.Test
 
 import org.junit.Assert.*
+import kotlin.math.absoluteValue
 
 /**
  * Created by Septian Adi Wijaya on 02/11/20
@@ -80,5 +81,13 @@ class IntegerKtTest {
         var result = number.squareRoot()
 
         assert(result == 11)
+    }
+
+    @Test
+    fun absolute() {
+        var number  = -1233
+        var result = number.absoluteValue
+
+        assert(result == 1233)
     }
 }

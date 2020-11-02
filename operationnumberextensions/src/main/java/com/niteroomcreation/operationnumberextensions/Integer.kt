@@ -71,6 +71,9 @@ fun Int.cubic(): Int {
     return power(3)
 }
 
+/**
+ * akar pangkat 2 dari bilangan
+ */
 fun Int.squareRoot(): Int {
 
     var temp: Int
@@ -84,4 +87,14 @@ fun Int.squareRoot(): Int {
     return squareRoot
 }
 
-
+/**
+ * bilangan absolut atau mutlak
+ * merupakan bilangan riil yang nilainya selalu positif
+ *
+ * ex. -3 nilai absolutnya 3
+ */
+fun Int.absolute(): Int {
+    if (this < 0)
+        return -this
+    return this
+}
