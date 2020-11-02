@@ -73,4 +73,12 @@ class IntegerKtTest {
         assert(result == 8)
 
     }
+
+    @Test
+    fun squareRoot() {
+        var number = 121
+        var result = number.squareRoot()
+
+        assert(result == 11)
+    }
 }

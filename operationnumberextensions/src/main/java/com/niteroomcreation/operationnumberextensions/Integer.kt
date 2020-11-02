@@ -71,4 +71,17 @@ fun Int.cubic(): Int {
     return power(3)
 }
 
+fun Int.squareRoot(): Int {
+
+    var temp: Int
+    var squareRoot = this / 2
+
+    do {
+        temp = squareRoot
+        squareRoot = (temp + (this / temp)) / 2
+    } while ((temp - squareRoot) != 0)
+
+    return squareRoot
+}
+
 
