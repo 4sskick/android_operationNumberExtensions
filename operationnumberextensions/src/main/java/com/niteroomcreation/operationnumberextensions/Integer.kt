@@ -98,3 +98,26 @@ fun Int.absolute(): Int {
         return -this
     return this
 }
+
+/**
+ * bilangan fibonacci didapat dari penjumlahan dari deret bilangan sebelumnya
+ *
+ * ex. deret fibo ke-6: 1 1 2 3 5 8
+ * nilai 8 merupakan bilangan hasil fibonacci
+ */
+fun Int.fibonacci(): Int {
+
+    var value: Int = 1
+    var prevValue: Int = 0
+
+    if (this == 1 || this == 2)
+        return 1
+
+    for (i in 3..this) {
+        prevValue = value - prevValue
+        value = value + prevValue
+    }
+
+    return value
+
+}

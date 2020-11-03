@@ -90,4 +90,14 @@ class IntegerKtTest {
 
         assert(result == 1233)
     }
+
+    @Test
+    fun fibonacci() {
+
+        var number = 6
+        var result = number.fibonacci()
+
+        assert(result==6)
+
+    }
 }
