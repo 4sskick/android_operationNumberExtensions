@@ -103,7 +103,7 @@ fun Int.absolute(): Int {
  * bilangan fibonacci didapat dari penjumlahan dari deret bilangan sebelumnya
  *
  * ex. deret fibo ke-6: 1 1 2 3 5 8
- * nilai 8 merupakan bilangan hasil fibonacci
+ * nilai 8 merupakan bilangan hasil fibonacci yg merupakan kembalian pada kelas
  */
 fun Int.fibonacci(): Int {
 
@@ -121,21 +121,26 @@ fun Int.fibonacci(): Int {
     return value
 }
 
+/**
+ * sama seperti kelas fibonacci(),
+ * ini mengembalikan semua nilai deretnya dalam list
+ */
 fun Int.fibonacciSeq(): List<Int> {
 
     var seq = ArrayList<Int>()
     var numberOfSeq: Int = this
 
-    var fibo: Int = 1
-    var prevFibo: Int = 0
+    var fibo = 1
+    var prevFibo = 0
 
     if (numberOfSeq == 1)
         return arrayListOf(1)
     else if (numberOfSeq == 2)
         return arrayListOf(1, 1)
 
-    seq.add(1)
-    seq.add(1)
+    repeat(2) {
+        seq.add(1)
+    }
 
     for (i in 3..this) {
         prevFibo = fibo - prevFibo
