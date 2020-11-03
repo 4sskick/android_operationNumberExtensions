@@ -3,6 +3,7 @@ package com.niteroomcreation.operationnumberextensions
 import org.junit.Test
 
 import org.junit.Assert.*
+import java.util.*
 import kotlin.math.absoluteValue
 
 /**
@@ -85,7 +86,7 @@ class IntegerKtTest {
 
     @Test
     fun absolute() {
-        var number  = -1233
+        var number = -1233
         var result = number.absolute()
 
         assert(result == 1233)
@@ -97,7 +98,19 @@ class IntegerKtTest {
         var number = 6
         var result = number.fibonacci()
 
-        assert(result==6)
+        assert(result == 8)
 
+    }
+
+    @Test
+    fun fibonacciSeq() {
+        var number = 2
+        var results = number.fibonacciSeq()
+
+        var anotherNumber = 6
+        var anotherResult = anotherNumber.fibonacciSeq()
+
+        assert(results.size == 2 && results[0] == 1 && results[1] == 1)
+        assertArrayEquals(anotherResult.toIntArray(), listOf<Int>(1, 1, 2, 3, 5, 8).toIntArray())
     }
 }

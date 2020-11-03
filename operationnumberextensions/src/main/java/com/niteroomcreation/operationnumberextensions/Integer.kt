@@ -119,5 +119,30 @@ fun Int.fibonacci(): Int {
     }
 
     return value
+}
 
+fun Int.fibonacciSeq(): List<Int> {
+
+    var seq = ArrayList<Int>()
+    var numberOfSeq: Int = this
+
+    var fibo: Int = 1
+    var prevFibo: Int = 0
+
+    if (numberOfSeq == 1)
+        return arrayListOf(1)
+    else if (numberOfSeq == 2)
+        return arrayListOf(1, 1)
+
+    seq.add(1)
+    seq.add(1)
+
+    for (i in 3..this) {
+        prevFibo = fibo - prevFibo
+        fibo = fibo + prevFibo
+
+        seq.add(fibo)
+    }
+
+    return seq
 }
