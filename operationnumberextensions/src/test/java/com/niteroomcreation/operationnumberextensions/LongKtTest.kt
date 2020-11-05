@@ -1,5 +1,6 @@
 package com.niteroomcreation.operationnumberextensions
 
+import org.hamcrest.core.IsInstanceOf.instanceOf
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -45,10 +46,27 @@ class LongKtTest {
 
     @Test
     fun power() {
-        var number = 3
+        var number = 3L
         var powNumber = 4
-        var result = number.power(powNumber)
+        var result: Long = number.power(powNumber)
 
-        assertEquals("$number ^ $powNumber should be",81, result)
+        assertThat(result, instanceOf(Long::class.java))
+        assertEquals("$number ^ $powNumber should be", 81, result)
+    }
+
+    @Test
+    fun square() {
+        var number = 6L
+        var result = number.square()
+
+        assertEquals("on square for $number", 36L, result)
+    }
+
+    @Test
+    fun cubic() {
+        var number = 4L
+        var result = number.cubic()
+
+        assertEquals("on cubic for $number", 64L, result)
     }
 }

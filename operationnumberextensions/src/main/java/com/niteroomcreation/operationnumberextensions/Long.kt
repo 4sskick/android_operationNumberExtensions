@@ -65,3 +65,11 @@ fun Long.power(pow: Int): Long {
     return result
 }
 
+fun Long.square(): Long {
+    return power(2)
+}
+
+fun Long.cubic(): Long {
+    return power(3)
+}
+
