@@ -77,4 +77,12 @@ class LongKtTest {
 
         assertEquals("square root of $number", 12, result)
     }
+
+    @Test
+    fun absolute() {
+        var number = -344L
+        var result = number.absolute()
+
+        assertEquals("absolute number $number", 344L, result)
+    }
 }

@@ -89,3 +89,15 @@ fun Long.squareRoot(): Long {
 
     return squareRoot
 }
+
+/**
+ * bilangan absolut atau mutlak
+ * merupakan bilangan riil yang nilainya selalu positif
+ *
+ * ex. -3 nilai absolutnya 3
+ */
+fun Long.absolute(): Long {
+    if (this < 0)
+        return -this
+    return this
+}
