@@ -20,4 +20,13 @@ class LongKtTest {
         var number = 23L
         assert(number.isPositive())
     }
+
+    @Test
+    fun isPrime() {
+        var number = 4L
+        var anotherNumber = 7L
+
+        assertEquals("$number isn't prime", false, number.isPrime())
+        assertEquals("$anotherNumber is prime", true, anotherNumber.isPrime())
+    }
 }
