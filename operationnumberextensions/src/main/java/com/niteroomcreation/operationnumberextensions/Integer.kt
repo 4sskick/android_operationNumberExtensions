@@ -104,6 +104,8 @@ fun Int.absolute(): Int {
  *
  * ex. deret fibo ke-6: 1 1 2 3 5 8
  * nilai 8 merupakan bilangan hasil fibonacci yg merupakan kembalian pada kelas
+ *
+ * this one gonna return what is the value of index position fibonacci on what its set
  */
 fun Int.fibonacci(): Int {
 

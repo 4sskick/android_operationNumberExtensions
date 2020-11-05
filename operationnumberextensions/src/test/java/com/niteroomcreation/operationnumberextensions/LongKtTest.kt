@@ -85,4 +85,12 @@ class LongKtTest {
 
         assertEquals("absolute number $number", 344L, result)
     }
+
+    @Test
+    fun fibonacci() {
+        var number = 6L
+        var result = number.fibonacci()
+
+        assertEquals("last number fibonacci number on $number", 8L, result)
+    }
 }

@@ -101,3 +101,27 @@ fun Long.absolute(): Long {
         return -this
     return this
 }
+
+/**
+ * bilangan fibonacci didapat dari penjumlahan dari deret bilangan sebelumnya
+ *
+ * ex. deret fibo ke-6: 1 1 2 3 5 8
+ * nilai 8 merupakan bilangan hasil fibonacci yg merupakan kembalian pada kelas method
+ *
+ * this one gonna return what is the value of index position fibonacci on what its set
+ */
+fun Long.fibonacci(): Long {
+
+    var value = 1L
+    var prevValue = 0L
+
+    if (this == value || this == 2L)
+        return value
+
+    for (i in 3..this) {
+        prevValue = value - prevValue
+        value = value + prevValue
+    }
+
+    return value
+}
