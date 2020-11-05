@@ -1,9 +1,9 @@
 package com.niteroomcreation.operationnumberextensions
 
 import org.hamcrest.core.IsInstanceOf.instanceOf
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertThat
 import org.junit.Test
-
-import org.junit.Assert.*
 
 /**
  * Created by Septian Adi Wijaya on 05/11/20
@@ -68,5 +68,13 @@ class LongKtTest {
         var result = number.cubic()
 
         assertEquals("on cubic for $number", 64L, result)
+    }
+
+    @Test
+    fun squareRoot() {
+        var number = 144L
+        var result = number.squareRoot()
+
+        assertEquals("square root of $number", 12, result)
     }
 }

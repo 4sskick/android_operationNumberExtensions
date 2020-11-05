@@ -73,3 +73,19 @@ fun Long.cubic(): Long {
     return power(3)
 }
 
+/**
+ * akar pangkat 2 dari bilangan
+ */
+fun Long.squareRoot(): Long {
+
+    var temp: Long
+    var squareRoot = this / 2L
+
+
+    do {
+        temp = squareRoot
+        squareRoot = (temp + (this / temp)) / 2
+    } while ((temp - squareRoot) != 0L)
+
+    return squareRoot
+}
