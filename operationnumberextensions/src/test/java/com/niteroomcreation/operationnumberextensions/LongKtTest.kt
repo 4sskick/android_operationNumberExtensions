@@ -93,4 +93,16 @@ class LongKtTest {
 
         assertEquals("last number fibonacci number on $number", 8L, result)
     }
+
+    @Test
+    fun fibonacciSeq() {
+        var numberSeq = 6L
+        var result = numberSeq.fibonacciSeq()
+
+        assertEquals(
+            "list seq number fibonacci on $numberSeq",
+            listOf(1L, 1L, 2L, 3L, 5L, 8L).toString(),
+            result.toString()
+        )
+    }
 }

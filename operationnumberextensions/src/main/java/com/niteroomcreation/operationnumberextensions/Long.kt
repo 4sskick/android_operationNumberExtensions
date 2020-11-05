@@ -125,3 +125,30 @@ fun Long.fibonacci(): Long {
 
     return value
 }
+
+fun Long.fibonacciSeq():List<Long>{
+
+    var seq = ArrayList<Long>()
+    var numberOfSeq = this
+
+    var fibo = 1L
+    var prevFibo = 0L
+
+    if (numberOfSeq == 1L)
+        return arrayListOf(1L)
+    else if (numberOfSeq == 2L)
+        return arrayListOf(1L, 1L)
+
+    repeat(2) {
+        seq.add(1L)
+    }
+
+    for (i in 3L..this) {
+        prevFibo = fibo - prevFibo
+        fibo = fibo + prevFibo
+
+        seq.add(fibo)
+    }
+
+    return seq
+}
