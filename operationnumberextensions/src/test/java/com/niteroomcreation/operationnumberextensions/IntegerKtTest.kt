@@ -39,15 +39,14 @@ class IntegerKtTest {
     @Test
     fun primeFactor() {
         var number = 21
-        var factorNumbers = number.primeFactor()
+        var result = number.primeFactor()
 
-        if (factorNumbers.size == 2
-            && factorNumbers[0] == 3
-            && factorNumbers[1] == 7
+        assertEquals(
+            "list number of factor prime $number",
+            listOf(3, 7).toString(),
+            result.toString()
         )
-            assert(true)
-        else
-            assert(false)
+        assertEquals("size list of factor prime $number", 2, result.size)
     }
 
     @Test
