@@ -42,4 +42,13 @@ class LongKtTest {
         )
         assertEquals("size list of factor prime ${result.size}", 1, result.size)
     }
+
+    @Test
+    fun power() {
+        var number = 3
+        var powNumber = 4
+        var result = number.power(powNumber)
+
+        assertEquals("$number ^ $powNumber should be",81, result)
+    }
 }

@@ -50,3 +50,18 @@ fun Long.primeFactor(): List<Long> {
     return numbers
 }
 
+/**
+ * bilangan berpangkat
+ * ex. 3L^2L = 9L
+ */
+fun Long.power(pow: Int): Long {
+
+    var result = 1L
+
+    repeat(pow) {
+        result = result * this
+    }
+
+    return result
+}
+
