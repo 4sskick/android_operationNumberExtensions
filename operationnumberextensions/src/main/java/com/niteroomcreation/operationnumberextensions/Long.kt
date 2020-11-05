@@ -32,3 +32,21 @@ fun Long.isPrime(): Boolean {
     return true
 }
 
+fun Long.primeFactor(): List<Long> {
+
+    var numbers = ArrayList<Long>()
+    var value: Long = this
+
+    for (i in 2..value) {
+
+        while (value % i == 0L) {
+            if (!numbers.contains(i))
+                numbers.add(i)
+
+            value = value / i
+        }
+    }
+
+    return numbers
+}
+

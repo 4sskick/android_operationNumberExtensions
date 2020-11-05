@@ -39,7 +39,7 @@ fun Int.primeFactor(): List<Int> {
 
     for (i in 2..value) {
 
-        while (value % i === 0) {
+        while (value % i == 0) {
             if (!factorNumbers.contains(i))
                 factorNumbers.add(i)
             value = value / i

@@ -24,9 +24,22 @@ class LongKtTest {
     @Test
     fun isPrime() {
         var number = 4L
-        var anotherNumber = 7L
+        var anotherNumber = 23L
 
         assertEquals("$number isn't prime", false, number.isPrime())
         assertEquals("$anotherNumber is prime", true, anotherNumber.isPrime())
+    }
+
+    @Test
+    fun primeFactor() {
+        var number = 23L
+        var result = number.primeFactor()
+
+        assertEquals(
+            "list number of factor prime $number",
+            listOf(23L).toString(),
+            result.toString()
+        )
+        assertEquals("size list of factor prime ${result.size}", 1, result.size)
     }
 }
