@@ -27,3 +27,10 @@ fun Double.power(pow: Int): Double {
     return value
 }
 
+fun Double.square(): Double {
+    return power(2)
+}
+
+fun Double.cubic(): Double {
+    return power(3)
+}

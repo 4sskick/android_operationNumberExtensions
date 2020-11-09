@@ -32,4 +32,18 @@ class DoubleKtTest {
 
         assertEquals(9.61, number.power(powNumber), DELTA)
     }
+
+    @Test
+    fun square() {
+        var number = 2.4
+
+        assertEquals(5.76, number.square(), DELTA)
+    }
+
+    @Test
+    fun cubic() {
+        var number = 4.7
+
+        assertEquals(103.823, number.cubic(), DELTA)
+    }
 }
