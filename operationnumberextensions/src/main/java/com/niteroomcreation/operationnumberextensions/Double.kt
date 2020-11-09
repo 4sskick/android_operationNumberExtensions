@@ -12,3 +12,18 @@ fun Double.isNegative(): Boolean {
 fun Double.isPositive(): Boolean {
     return (this > 0)
 }
+
+/**
+ * bilangan berpangkat
+ * ex. 3^2 = 9
+ */
+fun Double.power(pow: Int): Double {
+
+    var value = 1.0
+    repeat(pow) {
+        value = value * this
+    }
+
+    return value
+}
+
