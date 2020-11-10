@@ -18,6 +18,11 @@ class FloatKtTest {
 
     @Test
     fun isPositive() {
+        var number = 3.5f
+        var anotherNumber = -6.8f
+
+        assertEquals("the $number should be a positive", true, number.isPositive())
+        assertEquals("the $number should be a non positive", false, anotherNumber.isPositive())
     }
 
     @Test
