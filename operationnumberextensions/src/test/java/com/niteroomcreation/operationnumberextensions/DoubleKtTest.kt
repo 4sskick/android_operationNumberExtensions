@@ -10,7 +10,7 @@ import org.junit.Assert.*
 class DoubleKtTest {
 
     //presisi hingga 3 angka belakang koma
-    val DELTA = 1e-3
+    private val DELTA = 1e-3
 
     @Test
     fun isNegative() {

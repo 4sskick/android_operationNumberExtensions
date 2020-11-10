@@ -9,6 +9,8 @@ import org.junit.Assert.*
  */
 class FloatKtTest {
 
+    private val DELTA = 1e-3f
+
     @Test
     fun isNegative() {
         var number = -2f
@@ -27,6 +29,10 @@ class FloatKtTest {
 
     @Test
     fun power() {
+        var number = 4.6f
+        var powNumber = 4
+
+        assertEquals( 447.745f, number.power(powNumber), DELTA)
     }
 
     @Test
