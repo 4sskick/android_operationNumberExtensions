@@ -53,4 +53,13 @@ class DoubleKtTest {
 
         assertEquals(12.7, number.absolute(), DELTA)
     }
+
+    @Test
+    fun round() {
+        var number = 4.7
+        var anotherNumber = 7.2
+
+        assertEquals(5.0, number.round(), DELTA)
+        assertEquals(7.0, anotherNumber.round(), DELTA)
+    }
 }

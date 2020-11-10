@@ -40,3 +40,13 @@ fun Double.absolute(): Double {
         return -this
     return this
 }
+
+/**
+ * berapapun nilainya selama diatas .5 atau dibawah
+ * akan di bulatkan kebawah
+ */
+fun Double.round(): Double {
+    var value = (this + .5).toInt()
+
+    return value.toDouble()
+}
