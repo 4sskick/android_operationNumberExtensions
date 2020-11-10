@@ -9,7 +9,8 @@ import org.junit.Assert.*
  */
 class DoubleKtTest {
 
-    val DELTA = 1e-1
+    //presisi hingga 3 angka belakang koma
+    val DELTA = 1e-3
 
     @Test
     fun isNegative() {
@@ -61,5 +62,14 @@ class DoubleKtTest {
 
         assertEquals(5.0, number.round(), DELTA)
         assertEquals(7.0, anotherNumber.round(), DELTA)
+    }
+
+    @Test
+    fun inverse() {
+        var number = 3.5
+        var anotherNumber = -4.4
+
+        assertEquals(0.285, number.inverse(), DELTA)
+        assertEquals(-0.227, anotherNumber.inverse(), DELTA)
     }
 }

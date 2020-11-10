@@ -50,3 +50,7 @@ fun Double.round(): Double {
 
     return value.toDouble()
 }
+
+fun Double.inverse(): Double {
+    return 1 / this
+}
