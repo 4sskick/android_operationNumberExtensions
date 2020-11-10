@@ -62,6 +62,11 @@ class FloatKtTest {
 
     @Test
     fun round() {
+        var number = 4.7f
+        var anotherNumber = 7.2f
+
+        assertEquals(5.0f, number.round(), DELTA)
+        assertEquals(7.0f, anotherNumber.round(), DELTA)
     }
 
     @Test
