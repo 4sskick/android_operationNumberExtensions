@@ -34,3 +34,9 @@ fun Double.square(): Double {
 fun Double.cubic(): Double {
     return power(3)
 }
+
+fun Double.absolute(): Double {
+    if (this < 0)
+        return -this
+    return this
+}

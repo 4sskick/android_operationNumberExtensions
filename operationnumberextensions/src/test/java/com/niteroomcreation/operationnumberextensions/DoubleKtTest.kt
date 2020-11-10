@@ -46,4 +46,11 @@ class DoubleKtTest {
 
         assertEquals(103.823, number.cubic(), DELTA)
     }
+
+    @Test
+    fun absolute() {
+        var number = -12.7
+
+        assertEquals(12.7, number.absolute(), DELTA)
+    }
 }
