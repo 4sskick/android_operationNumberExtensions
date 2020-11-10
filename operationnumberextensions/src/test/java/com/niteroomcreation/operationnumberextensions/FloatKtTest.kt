@@ -55,6 +55,9 @@ class FloatKtTest {
 
     @Test
     fun absolute() {
+        var number = -4f
+
+        assertEquals("the $number should always be a positive", 4f, number.absolute())
     }
 
     @Test
