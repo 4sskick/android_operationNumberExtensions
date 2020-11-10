@@ -71,5 +71,10 @@ class FloatKtTest {
 
     @Test
     fun inverse() {
+        var number = 3.5f
+        var anotherNumber = -4.4f
+
+        assertEquals(0.285f, number.inverse(), DELTA)
+        assertEquals(-0.227f, anotherNumber.inverse(), DELTA)
     }
 }
