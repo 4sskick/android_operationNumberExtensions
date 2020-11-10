@@ -30,17 +30,27 @@ class FloatKtTest {
     @Test
     fun power() {
         var number = 4.6f
-        var powNumber = 4
+        var anotherNumber = -4.6f
 
-        assertEquals( 447.745f, number.power(powNumber), DELTA)
+        var powNumber = 4
+        var anotherPowNumber = 3
+
+        assertEquals(447.745f, number.power(powNumber), DELTA)
+        assertEquals(-97.336f, anotherNumber.power(anotherPowNumber), DELTA)
     }
 
     @Test
     fun square() {
+        var number = 5f
+
+        assertEquals("the $number^2", 25f, number.square())
     }
 
     @Test
     fun cubic() {
+        var number = 6.0f
+
+        assertEquals("the $number^3", 216f, number.cubic())
     }
 
     @Test
